@@ -1,0 +1,33 @@
+<form>
+   
+   <div class="mb-3">
+    <label for="id" class="form-label">Id</label>
+    <input type="text" class="form-control" [(ngModel)]="id" name="id">
+
+  </div>
+
+   <div class="mb-3">
+    <label for="status" class="form-label">Status</label>
+    <input type="text" class="form-control" [(ngModel)]="status" name="status">
+
+  </div>
+
+   <div class="mb-3">
+    <label for="date" class="form-label">Date - Use the format 'YYYY-MM-DD' to insert date properly</label>
+    <input type="text" class="form-control" [(ngModel)]="date" name="date">
+
+  </div> 
+   
+   <div class="mb-3">
+      <label for="amount" class="form-label">Amount</label>
+      <input type="text" class="form-control" [(ngModel)]="amount" name="amount">
+
+    </div>
+
+    <button (click)="addinvoice()" *ngIf="invoice.id==0" class="btn btn-primary" >
+       Add
+    </button>
+    <button (click)="updateinvoice()" *ngIf="invoice.id!=0" class="btn btn-primary">
+      Update
+    </button>
+</form>
